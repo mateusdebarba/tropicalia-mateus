@@ -1,28 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-
-    const botaoDeAcessibilidade = document.getElementById('botao-acessibidade');
+document.addEventListener('DOMContentLoaded', function(){
+    
+    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
 
-    botaoDeAcessibilidade.addEventListener('click', function () {
+    botaoDeAcessibilidade.addEventListener('click',function(){
         botaoDeAcessibilidade.classList.toggle('rotacao-botao');
         opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
     })
 
 
-
-
-    const aumentaFontBotao = document.getElementById('aumentar-fonte');
-    const diminuiFontBotao = document.getElementById('diminuir-fonte');
-
+    
+    const aumentaFonteBotao = document .getElementById('aumentar-fonte');
+    const diminuiFonteBotao = document .getElementById('diminuir-fonte');
+    
     let tamanhoAtualFonte = 1;
-
-    aumentaFontBotao.addEventListener('click', function () {
-        tamanhoAtualFonte += 0.1;
+    
+    aumentaFonteBotao.addEventListener('click', function(){
+        tamanhoAtualFonte+= 0.1; 
         document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     });
 
-    diminuiFontBotao.addEventListener('click', function () {
-        tamanhoAtualFonte -= 0.1;
+    diminuiFonteBotao.addEventListener('click', function(){
+        tamanhoAtualFonte -= 0.1; 
         document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     });
 });
